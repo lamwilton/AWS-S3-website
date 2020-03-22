@@ -1,0 +1,47 @@
+<html>
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "https://bp16ebor0f.execute-api.us-east-1.amazonaws.com/default/MyFirstlambdafunc", true);
+    xhttp.send();
+
+}
+
+</script>
+
+<head>
+    <meta http-equiv = "refresh" content = "10; url = https://www.linkedin.com/in/lamwilton" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158715637-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-158715637-1');
+	</script>
+</head>
+
+<body><div align="center">
+<img src="https://s3.us-east-2.amazonaws.com/giiglr.com/banner.jpg"></img>
+<br> 
+(from Amazon S3)
+<h1>Hello <span id="my-demo"></span> (by AWS lambda function)
+<br>
+Welcome! You will be redirected to my LinkedIn profile in 10 seconds
+<script>myFunction()</script>
+<br>
+<br>
+<a href="https://www.linkedin.com/lamwilton">My Linkedin profile</a>
+<br>
+<a href="https://www.github.com/lamwilton">My Github repository</a>
+</h1>
+</div>
+</body>
+</html>
