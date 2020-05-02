@@ -1,6 +1,7 @@
 from datetime import datetime
 import boto3
 
+
 def writeDB(time, ip, origin):
     db = boto3.client('dynamodb')
     db.put_item(TableName='myWebsiteTable', Item={'time' :{'S': time}, 'ip' : {'S': ip}, 'origin' : {'S': origin}})
